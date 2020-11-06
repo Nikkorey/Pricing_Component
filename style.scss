@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+  --toggle: linear-gradient(50deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%))
+  --linearGradient: linear-gradient(
+    50deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: var(--Very-Light-Grayish-Blue);
+}
+
+/* Header */
+.header {
+  border: solid;
+}
+
+.toggle__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Article */
+.section {
+  margin: 0 auto;
+  width: 90%;
+}
+.card__container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  p {
+      margin: 2rem 0;
+  }
+}
+
+.cardBlue {
+  background-color: var(--toggle);
+}
