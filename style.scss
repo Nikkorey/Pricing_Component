@@ -5,18 +5,18 @@
   padding: 0;
 }
 
-//  :root {
-//    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
-//    --Light-Grayish-Blue: hsl(234, 14%, 74%);
-//    --Grayish-Blue: hsl(233, 13%, 49%);
-//    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
-//    --toggle: linear-gradient(50deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%))
-//    --linearGradient: linear-gradient(
-//      50deg,
-//      hsl(236, 72%, 79%),
-//      hsl(237, 63%, 64%)
-//    );
-//  }
+:root {
+  // --primary-color: hsl(240, 78%, 98%);
+  --primary-color: linear-gradient(
+    90deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+}
 
 html {
   font-size: 62.5%;
@@ -26,7 +26,8 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   text-align: center;
-  background-color: var(--Very-Light-Grayish-Blue);
+  background-color: var(--very-light-grayish-blue);
+  color: var(--dark-grayish-blue);
 }
 
 a {
@@ -34,10 +35,23 @@ a {
   text-transform: uppercase;
 }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 // /* Header */
 .header {
-  border: solid;
+  padding: 4rem 3rem;
+  max-width: 300px;
+  margin: 0 auto;
+
+  &__title {
+    margin-bottom: 4rem;
+  }
 }
+
 .toggle__container {
   display: flex;
   justify-content: space-between;
@@ -47,7 +61,7 @@ a {
   position: relative;
   width: 50px;
   height: 25px;
-  background: var(--toggle);
+  background: var(--primary-color);
   -webkit-appearance: none;
   border-radius: 20px;
   outline: none;
@@ -56,7 +70,7 @@ a {
   cursor: pointer;
 
   &:checked {
-    background: var(--toggle);
+    background: var(--primary-color);
   }
 
   &::before {
@@ -84,10 +98,9 @@ a {
 .plans__container {
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
 }
 .plans {
-  padding: 2rem 3.5rem;
+  padding: 2rem 2rem;
   border-radius: 1rem;
   margin-top: 2rem;
 
@@ -95,6 +108,8 @@ a {
     font-size: 5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
 
     &-dollar {
       font-size: 3rem;
@@ -102,16 +117,19 @@ a {
     }
   }
 
-  p {
-    margin: 2rem 0;
-  }
-
   &__white {
     background-color: #ffffff;
+    color: var(--dark-grayish-blue);
   }
   &__accent {
-    background-color: saddlebrown;
+    background: var(--primary-color);
     color: #ffffff;
+  }
+
+  &__info {
+    p {
+      margin: 1.5rem 0;
+    }
   }
 }
 
@@ -119,7 +137,7 @@ a {
 .btn {
   display: block;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   border-radius: 0.5rem;
   outline: none;
 }
@@ -129,6 +147,6 @@ a {
 }
 
 .btn__accent {
-  background-color: pink;
+  background: var(--primary-color);
   color: #ffffff;
 }
