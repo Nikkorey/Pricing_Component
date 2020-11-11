@@ -21,7 +21,7 @@
       <h1 class="header__title">Our Pricing</h1>
       <div class="toggle__container">
         <p>Annually</p>
-        <input type="text" class="header__toggle">
+        <input type="checkbox" class="header__toggle">
         <p>Monthly</p>
       </div>
     </header>
@@ -29,7 +29,10 @@
     <section class="plans__container">
       <article class="plans plans__white">
         <p class="plans__title">Basic</p>
-        <h2 class="plans__price"><span class="plans__price-dollar">&#36</span>199.99</h2>
+        <div class="plans__price">
+          <span class="plans__price-dollar">&#36</span> 
+          <h2 class="plans__price-amount basic">199.99</h2>
+        </div>
         <div class="plans__info">
           <hr>
           <p>500 GB Storage</p>
@@ -43,8 +46,11 @@
       </article>
 
       <article class="plans plans__accent">
-        <p class="price__title">Professional</p>
-        <h2 class="plans__price"><span class="plans__price-dollar">&#36</span>249.99</h2>
+        <p class="plans__title">Professional</p>
+        <div class="plans__price">
+          <span class="plans__price-dollar">&#36</span> 
+          <h2 class="plans__price-amount professional">249.99</h2>
+        </div>
         <div class="plans__info">
           <hr>
           <p>1 TB Storage</p>
@@ -58,8 +64,11 @@
       </article>
 
       <article class="plans plans__white">
-        <p class="price__title">Master</p>
-        <h2 class="plans__price"><span class="plans__price-dollar">&#36</span>399.99</h2>
+        <p class="plans__title">Master</p>
+        <div class="plans__price">
+          <span class="plans__price-dollar">&#36</span> 
+          <h2 class="plans__price-amount master">399.99</h2>
+        </div>
         <div class="plans__info">
           <hr>
           <p>2 TB Storage</p>
@@ -101,5 +110,6 @@
       Coded by <a href="#">Nikko Rey Hular</a>.
     </div>
   </div>
+  <script src="js/app.js"></script>
 </body>
 </html>
