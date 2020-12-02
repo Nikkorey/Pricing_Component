@@ -5,15 +5,12 @@
 }
 
 :root {
-  --primary-color: linear-gradient(
-    90deg,
-    hsl(236, 72%, 79%),
-    hsl(237, 63%, 64%)
-  );
-  --very-light-grayish-blue: hsl(240, 78%, 98%);
-  --light-grayish-blue: hsl(234, 14%, 74%);
-  --grayish-blue: hsl(233, 13%, 49%);
-  --dark-grayish-blue: hsl(232, 13%, 33%);
+  --clr-primary: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --clr-neutral-100: hsl(240, 78%, 98%);
+  --clr-neutral-200: hsl(234, 14%, 74%);
+  --clr-neutral-300: hsl(233, 13%, 49%);
+  --clr-neutral-400: hsl(232, 13%, 33%);
+  --ff-mont: "Montserrat", sans-serif;
 }
 
 html {
@@ -21,12 +18,13 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--ff-mont);
   font-size: 1.5rem;
-  text-align: center;
-  background-color: var(--very-light-grayish-blue);
-  color: var(--dark-grayish-blue);
-  height: 100vh;
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-400);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -34,6 +32,7 @@ a {
   text-transform: uppercase;
 }
 
+/* Utility Class */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -44,6 +43,10 @@ a {
   .container {
     padding: 0;
   }
+}
+
+.text-center {
+  text-align: center;
 }
 
 .header {
@@ -61,14 +64,14 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--light-grayish-blue);
+  color: var(--clr-neutral-200);
 }
 
 .toggle {
   position: relative;
   width: 50px;
   height: 25px;
-  background: var(--primary-color);
+  background: var(--clr-primary);
   -webkit-appearance: none;
   border-radius: 20px;
   outline: none;
@@ -78,7 +81,7 @@ a {
 }
 
 .toggle:checked {
-  background: var(--toggle);
+  background: var(--clr-primary);
 }
 
 .toggle::before {
@@ -89,7 +92,7 @@ a {
   top: 2.5px;
   width: 20px;
   height: 20px;
-  background: white;
+  background: #fff;
   border-radius: 50%;
   transform: scale(0.9);
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -142,11 +145,11 @@ a {
 
 .plans__white {
   background-color: #ffffff;
-  color: var(--dark-grayish-blue);
+  color: var(--clr-neutral-400);
 }
 
 .plans__accent {
-  background: var(--primary-color);
+  background: var(--clr-primary);
   color: #ffffff;
 }
 
@@ -168,6 +171,11 @@ a {
 }
 
 .btn__accent {
-  background: var(--primary-color);
+  background: var(--clr-primary);
   color: #ffffff;
+}
+
+.footer {
+  margin-top: auto;
+  padding-bottom: 2rem;
 }

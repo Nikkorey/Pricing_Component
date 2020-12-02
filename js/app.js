@@ -10,11 +10,14 @@ function switchPlan(e) {
         basicPrice.textContent = '19.99'
         professionalPrice.textContent = '24.99'
         masterPrice.textContent = '39.99'
+        localStorage.setItem('plans', 'monthly')
     } else {
         basicPrice.textContent = '199.99'
         professionalPrice.textContent = '249.99'
         masterPrice.textContent = '399.99'
+        localStorage.setItem('plans', 'annually')
     }
 }
 
 toggleSwitch.addEventListener('change', switchPlan)
+
